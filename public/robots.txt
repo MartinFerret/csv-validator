@@ -1,0 +1,15 @@
+# robots.txt for StripeClear
+# https://stripeclear.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://stripeclear.com/sitemap.xml
+
+# Disallow API routes
+Disallow: /api/
+
+# Disallow query parameters that shouldn't be indexed
+Disallow: /*?payment=*
+Disallow: /*?session_id=*

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { PRICE_AMOUNT_CENTS, STRIPE_PRODUCT_ID } from '@/lib/config';
+import { PRICING, PackType, STRIPE_PRODUCT_ID } from '@/lib/config';
 
 function getStripe() {
   const secretKey = process.env.STRIPE_SECRET_KEY;
@@ -19,6 +19,20 @@ export async function POST(request: Request) {
 
     const { origin } = new URL(request.url);
 
+    // Get pack type from request body
+    const body = await request.json().catch(() => ({}));
+    const packType: PackType = body.packType || 'single';
+
+    // Validate pack type
+    if (!PRICING[packType]) {
+      return NextResponse.json(
+        { error: 'Invalid pack type' },
+        { status: 400 }
+      );
+    }
+
+    const pack = PRICING[packType];
+
     // Create Stripe Checkout Session with price_data
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
@@ -27,7 +41,7 @@ export async function POST(request: Request) {
           price_data: {
             currency: 'usd',
             product: productId,
-            unit_amount: PRICE_AMOUNT_CENTS,
+            unit_amount: pack.priceCents,
           },
           quantity: 1,
         },
@@ -35,6 +49,11 @@ export async function POST(request: Request) {
       mode: 'payment',
       success_url: `${origin}?payment=success&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}?payment=cancelled`,
+      metadata: {
+        packType: packType,
+        files: pack.files.toString(),
+        productName: pack.name,
+      },
     });
 
     return NextResponse.json({ url: session.url });

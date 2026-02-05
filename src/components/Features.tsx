@@ -29,7 +29,7 @@ export default function Features() {
                 and special characters. You know the drill: Müller becomes MÃ¼ller, café becomes cafÃ©.
               </p>
               <p className="text-gray-500">
-                Our CSV cleaner automatically detects and repairs encoding issues — no technical knowledge required.
+                Our CSV cleaner automatically detects and repairs encoding issues - no technical knowledge required.
               </p>
             </div>
             <div className="bg-gray-950 rounded-2xl p-6 font-mono text-sm">
@@ -107,7 +107,7 @@ export default function Features() {
                 cause false &quot;duplicate&quot; entries, and make data matching impossible.
               </p>
               <p className="text-gray-500">
-                Every cell gets trimmed and cleaned — clean CSV data in one click.
+                Every cell gets trimmed and cleaned - clean CSV data in one click.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">

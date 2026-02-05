@@ -1,12 +1,14 @@
 'use client';
 
+import { PRICE_AMOUNT } from '@/lib/config';
+
 export default function FinalCTA() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 relative overflow-hidden">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0A2540] relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div
@@ -22,37 +24,37 @@ export default function FinalCTA() {
       </div>
 
       {/* Gradient orbs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px]" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#635BFF]/20 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00D4FF]/20 rounded-full blur-[120px]" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full mb-8">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          <span className="text-sm font-medium text-slate-300">Start cleaning in 30 seconds</span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full mb-8 backdrop-blur-sm">
+          <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/>
+          </svg>
+          <span className="text-sm font-medium text-white">For Stripe users who need clarity</span>
         </div>
 
         {/* Headline */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-          Stop wrestling with
+          Stop guessing where
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-            broken data
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#635BFF] to-[#00D4FF]">
+            your money went
           </span>
         </h2>
-        <p className="text-lg text-slate-400 mb-10 max-w-xl mx-auto">
-          Join 50,000+ professionals who trust CleanCSV for their data cleaning workflows.
+        <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto">
+          Upload your Stripe export. Get a file your accountant can actually understand.
+          No subscription. No account. Just ${PRICE_AMOUNT} per file.
         </p>
 
         {/* CTA Button */}
         <button
           onClick={scrollToTop}
-          className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-xl text-lg font-semibold shadow-2xl hover:shadow-white/10 hover:scale-[1.02] transition-all duration-200"
+          className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#635BFF] to-[#00D4FF] text-white rounded-xl text-lg font-semibold shadow-2xl hover:shadow-[#635BFF]/30 hover:scale-[1.02] transition-all duration-200"
         >
-          Clean Your CSV Now
+          Transform My Stripe Export
           <svg
             className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform"
             fill="none"
@@ -64,24 +66,24 @@ export default function FinalCTA() {
         </button>
 
         {/* Trust badges */}
-        <div className="mt-12 flex flex-wrap justify-center gap-8 text-slate-500 text-sm">
+        <div className="mt-12 flex flex-wrap justify-center gap-8 text-white/50 text-sm">
           <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-[#00D924]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            <span>No server uploads</span>
+            <span>100% browser-based</span>
           </div>
           <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-[#00D924]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            <span>Results in seconds</span>
+            <span>Your data stays private</span>
           </div>
           <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-[#00D924]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            <span>No account required</span>
+            <span>Instant download</span>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-[#E3E8EE]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -27,25 +27,25 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-1">
             <button
               onClick={() => scrollToSection('how-it-works')}
-              className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-all"
+              className="px-4 py-2 text-sm text-[#425466] hover:text-[#0A2540] hover:bg-[#F6F9FC] rounded-lg transition-all"
             >
               How it Works
             </button>
             <button
               onClick={() => scrollToSection('features')}
-              className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-all"
+              className="px-4 py-2 text-sm text-[#425466] hover:text-[#0A2540] hover:bg-[#F6F9FC] rounded-lg transition-all"
             >
-              Security
+              Features
             </button>
             <button
               onClick={() => scrollToSection('pricing')}
-              className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-all"
+              className="px-4 py-2 text-sm text-[#425466] hover:text-[#0A2540] hover:bg-[#F6F9FC] rounded-lg transition-all"
             >
               Pricing
             </button>
             <button
               onClick={() => scrollToSection('faq')}
-              className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-all"
+              className="px-4 py-2 text-sm text-[#425466] hover:text-[#0A2540] hover:bg-[#F6F9FC] rounded-lg transition-all"
             >
               FAQ
             </button>
@@ -53,21 +53,20 @@ export default function Header() {
 
           {/* Right side */}
           <div className="flex items-center gap-3">
-            {/* Security indicator */}
-            <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-100 rounded-lg">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span className="text-xs font-medium text-emerald-700">Client-side only</span>
+            {/* Stripe badge */}
+            <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-[#635BFF]/5 border border-[#635BFF]/20 rounded-lg">
+              <svg className="w-4 h-4 text-[#635BFF]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/>
+              </svg>
+              <span className="text-xs font-medium text-[#635BFF]">For Stripe Users</span>
             </div>
 
             {/* CTA Button */}
             <button
               onClick={scrollToTop}
-              className="px-5 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-all shadow-sm hover:shadow-md"
+              className="px-5 py-2 bg-[#635BFF] text-white text-sm font-semibold rounded-lg hover:bg-[#5851EA] transition-all shadow-sm hover:shadow-md"
             >
-              Get Started
+              Clean My Export
             </button>
           </div>
         </div>

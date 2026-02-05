@@ -9,28 +9,36 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
-    question: 'How does CleanCSV protect my data?',
-    answer: 'CleanCSV processes your files entirely in your browser using JavaScript. Your data never leaves your computer and is never uploaded to any server. You can verify this by disconnecting from the internet after the page loads — the tool will continue to work perfectly. We have no access to your files, no logging, and no tracking.',
+    question: 'Which Stripe export types do you support?',
+    answer: 'We support all standard Stripe export types: Payments, Balance Transactions, Payouts, Refunds, Customers, and Invoices. Each export type gets optimized transformation rules to show the most relevant data for reconciliation.',
   },
   {
-    question: 'How do I fix UTF-8 encoding errors?',
-    answer: 'CleanCSV automatically detects and repairs UTF-8 encoding issues (mojibake). Common symptoms include characters like "Ã©" instead of "é", "Ã¼" instead of "ü", or "â€™" instead of apostrophes. Upload your file and our tool converts Windows-1252, ISO-8859-1, and other legacy encodings to proper UTF-8.',
+    question: 'How does the gross/fees/net breakdown work?',
+    answer: 'Stripe exports often show amounts in cents and bury fee information across multiple columns. We extract and calculate the gross payment amount, all applicable Stripe fees (processing, international, disputes), and the final net amount that hits your bank. Everything is converted to readable dollar amounts.',
   },
   {
-    question: 'What file sizes can CleanCSV handle?',
-    answer: 'Since all processing happens in your browser, CleanCSV can handle files with hundreds of thousands of rows on most modern computers. Processing happens in under 1 second, even for 50,000+ row files. For very large files (1M+ rows), we recommend splitting them into smaller chunks.',
+    question: 'What is payout grouping?',
+    answer: 'When Stripe sends money to your bank, they batch multiple payments into a single transfer. Our payout grouping feature shows you exactly which customer payments are included in each bank deposit, making reconciliation with your bank statement straightforward.',
   },
   {
-    question: 'Can I use CleanCSV with Excel or Google Sheets?',
-    answer: 'Yes. Export your spreadsheet as CSV first: in Excel, go to File → Save As → "CSV UTF-8". In Google Sheets, go to File → Download → "Comma-separated values". Then upload the CSV to CleanCSV, fix the issues, and re-import the cleaned file back into your spreadsheet app.',
+    question: 'Is my Stripe data safe?',
+    answer: 'Your data never leaves your computer. All processing happens locally in your browser using JavaScript. We have no servers that receive, store, or process your Stripe exports. You can verify this by disconnecting from the internet after the page loads - the tool continues to work.',
   },
   {
-    question: 'What CSV separators are supported?',
-    answer: 'CleanCSV automatically detects comma (,), semicolon (;), and tab separators. You can also convert between formats — for example, import a semicolon-separated European CSV and export it as comma-separated for US systems.',
+    question: 'Why are dates showing differently than in Stripe?',
+    answer: 'Stripe exports timestamps in UTC timezone. We convert all dates to your local timezone automatically, so they match what you see in your Stripe Dashboard and make sense for your accounting records. No more date mismatches.',
   },
   {
-    question: 'Is CleanCSV compliant with GDPR and other regulations?',
-    answer: 'Yes. Because your data never leaves your browser, CleanCSV is compliant with GDPR, CCPA, HIPAA, and other data protection regulations by design. There is no data to protect on our end because we never receive it.',
+    question: 'Can I use this with QuickBooks, Xero, or other accounting software?',
+    answer: 'Yes. The cleaned CSV output is designed to be compatible with all major accounting software. Human-readable column names, proper date formats, and clear currency amounts make importing into QuickBooks, Xero, FreshBooks, or even Excel straightforward.',
+  },
+  {
+    question: 'What if I have multiple Stripe accounts?',
+    answer: 'Each file is processed independently, and there\'s no account linking. Simply export from each Stripe account and process them separately. The file packs work across any number of Stripe accounts.',
+  },
+  {
+    question: 'Do you offer refunds?',
+    answer: 'Given the nature of the product (instant delivery of transformed files), we typically don\'t offer refunds. However, if the tool genuinely doesn\'t work for your export type, contact us and we\'ll make it right.',
   },
 ];
 
@@ -42,20 +50,17 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50" id="faq">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#F6F9FC]" id="faq">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-200 border border-slate-300 rounded-full mb-6">
-            <svg className="w-4 h-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span className="text-sm font-medium text-slate-600">Have questions?</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            Frequently Asked Questions
+          <p className="text-[#635BFF] font-semibold text-sm uppercase tracking-wider mb-3">
+            FAQ
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0A2540] mb-4">
+            Common questions
           </h2>
-          <p className="text-slate-600 text-lg">
-            Everything you need to know about CleanCSV
+          <p className="text-[#425466] text-lg">
+            Everything you need to know about transforming Stripe exports
           </p>
         </div>
 
@@ -64,24 +69,24 @@ export default function FAQ() {
             <div
               key={idx}
               className={`bg-white border rounded-xl overflow-hidden transition-all duration-200 ${
-                openIndex === idx ? 'border-slate-300 shadow-lg' : 'border-slate-200'
+                openIndex === idx ? 'border-[#635BFF]/30 shadow-lg shadow-[#635BFF]/5' : 'border-[#E3E8EE]'
               }`}
               itemScope
               itemType="https://schema.org/Question"
             >
               <button
                 onClick={() => toggleItem(idx)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-50 transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#F6F9FC] transition-colors"
                 aria-expanded={openIndex === idx}
               >
-                <span className="font-medium text-slate-900 pr-4" itemProp="name">
+                <span className="font-medium text-[#0A2540] pr-4" itemProp="name">
                   {item.question}
                 </span>
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-200 ${
-                  openIndex === idx ? 'bg-slate-900 rotate-180' : 'bg-slate-100'
+                  openIndex === idx ? 'bg-[#635BFF] rotate-180' : 'bg-[#F6F9FC]'
                 }`}>
                   <svg
-                    className={`w-4 h-4 transition-colors ${openIndex === idx ? 'text-white' : 'text-slate-600'}`}
+                    className={`w-4 h-4 transition-colors ${openIndex === idx ? 'text-white' : 'text-[#8898AA]'}`}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -100,7 +105,7 @@ export default function FAQ() {
                 itemProp="acceptedAnswer"
               >
                 <div className="px-6 pb-6">
-                  <p className="text-slate-600 leading-relaxed" itemProp="text">
+                  <p className="text-[#425466] leading-relaxed" itemProp="text">
                     {item.answer}
                   </p>
                 </div>
@@ -111,9 +116,9 @@ export default function FAQ() {
 
         {/* Contact CTA */}
         <div className="mt-12 text-center">
-          <p className="text-slate-500 mb-2">Still have questions?</p>
-          <a href="mailto:support@cleancsv.io" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
-            Contact our support team →
+          <p className="text-[#8898AA] mb-2">Still have questions?</p>
+          <a href="mailto:mferret.pro@gmail.com" className="text-[#635BFF] font-medium hover:underline transition-colors">
+            Contact us →
           </a>
         </div>
       </div>

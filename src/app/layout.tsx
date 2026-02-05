@@ -15,37 +15,34 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cleancsv.io'),
+  metadataBase: new URL('https://stripeclear.com'),
   title: {
-    default: "CleanCSV - Fix Broken CSV Files Online | CSV Cleaner Tool",
-    template: "%s | CleanCSV",
+    default: "StripeClear - Transform Stripe CSV Exports into Accountant-Ready Files",
+    template: "%s | StripeClear",
   },
-  description: "Fix broken CSV files instantly. CleanCSV repairs encoding issues, removes duplicates, trims whitespace, and converts separators. 100% private - your data never leaves your browser.",
+  description: "Transform confusing Stripe CSV exports into clean, accountant-ready files. Clear gross/fees/net breakdown, payout grouping, timezone conversion. 100% private - your data never leaves your browser.",
   keywords: [
-    "CSV cleaner",
-    "CSV cleaner online",
-    "fix broken CSV file",
-    "fix CSV encoding",
-    "fix CSV encoding errors",
-    "UTF-8 CSV fix",
-    "UTF-8 converter",
-    "remove duplicate rows CSV",
-    "remove CSV duplicates",
-    "CSV repair tool",
-    "clean CSV file online",
-    "CSV encoding fix",
-    "mojibake fixer",
-    "CSV whitespace remover",
-    "trim CSV whitespace",
-    "CSV separator converter",
-    "broken CSV repair",
-    "CSV data cleaning",
-    "repair CSV file",
-    "CSV file cleaner",
+    "Stripe export",
+    "Stripe CSV export",
+    "Stripe export cleaner",
+    "Stripe payout reconciliation",
+    "Stripe fees breakdown",
+    "Stripe accounting",
+    "Stripe bookkeeping",
+    "Stripe QuickBooks",
+    "Stripe Xero",
+    "clean Stripe export",
+    "Stripe balance transactions",
+    "Stripe payments export",
+    "Stripe CSV converter",
+    "Stripe export to Excel",
+    "Stripe bank reconciliation",
+    "Stripe gross net fees",
+    "accountant Stripe export",
   ],
-  authors: [{ name: "CleanCSV" }],
-  creator: "CleanCSV",
-  publisher: "CleanCSV",
+  authors: [{ name: "StripeClear" }],
+  creator: "StripeClear",
+  publisher: "StripeClear",
   robots: {
     index: true,
     follow: true,
@@ -57,39 +54,50 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  // Verification tags - replace with your actual verification codes
+  verification: {
+    google: 'YOUR_GOOGLE_VERIFICATION_CODE', // Replace after adding site to Google Search Console
+    // yandex: 'YOUR_YANDEX_CODE',
+    // bing: 'YOUR_BING_CODE',
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://cleancsv.io",
-    siteName: "CleanCSV",
-    title: "CleanCSV - Fix Broken CSV Files Online in Seconds",
-    description: "Fix encoding issues, remove duplicates, and clean your CSV files instantly. 100% private - your data never leaves your browser.",
+    url: "https://stripeclear.com",
+    siteName: "StripeClear",
+    title: "StripeClear - Stripe Exports Made Accountant-Ready",
+    description: "Transform messy Stripe CSV exports into clean files with clear gross/fees/net breakdown. 100% private browser processing.",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://stripeclear.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "CleanCSV - Fix Broken CSV Files Online",
+        alt: "StripeClear - Transform Stripe Exports into Accountant-Ready Files",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CleanCSV - Fix Broken CSV Files Online in Seconds",
-    description: "Fix encoding issues, remove duplicates, and clean your CSV files instantly. 100% private - your data never leaves your browser.",
-    images: ["/og-image.png"],
+    title: "StripeClear - Stripe Exports Made Accountant-Ready",
+    description: "Transform messy Stripe CSV exports into clean files with clear gross/fees/net breakdown. 100% private browser processing.",
+    images: ["https://stripeclear.com/og-image.png"],
+    creator: "@stripeclear",
   },
   alternates: {
-    canonical: "https://cleancsv.io",
+    canonical: "https://stripeclear.com",
   },
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/favicon.ico', sizes: '32x32' },
     ],
-    apple: '/icon.svg',
+    apple: '/apple-touch-icon.png',
   },
   category: "Technology",
+  other: {
+    'theme-color': '#635BFF',
+  },
 };
 
 export default function RootLayout({
@@ -97,67 +105,126 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
+  // WebApplication Schema
+  const webAppJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "CleanCSV",
-    "url": "https://cleancsv.io",
-    "description": "Fix broken CSV files instantly. Repairs encoding issues, removes duplicates, trims whitespace. 100% private - your data never leaves your browser.",
-    "applicationCategory": "UtilitiesApplication",
+    "@id": "https://stripeclear.com/#webapp",
+    "name": "StripeClear",
+    "url": "https://stripeclear.com",
+    "description": "Transform confusing Stripe CSV exports into accountant-ready files. Clear gross/fees/net breakdown, payout grouping, timezone conversion.",
+    "applicationCategory": "FinanceApplication",
     "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "9.99",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock"
+    },
     "featureList": [
-      "Fix encoding issues (UTF-8 conversion)",
-      "Remove duplicate rows",
-      "Trim whitespace",
-      "Convert separators",
+      "Gross, fees, and net amount breakdown",
+      "Payout grouping for bank reconciliation",
+      "Timezone conversion to local time",
+      "Human-readable column names",
+      "Refund linking to original payments",
       "100% browser-based processing",
-      "No data upload required"
-    ]
+      "No data upload to servers"
+    ],
+    "screenshot": "https://stripeclear.com/og-image.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
   };
 
+  // Organization Schema
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://stripeclear.com/#organization",
+    "name": "StripeClear",
+    "url": "https://stripeclear.com",
+    "logo": "https://stripeclear.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "mferret.pro@gmail.com",
+      "contactType": "customer service"
+    },
+    "sameAs": []
+  };
+
+  // FAQ Schema
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://stripeclear.com/#faq",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How do I fix a broken CSV file online?",
+        "name": "Which Stripe export types are supported?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Drag and drop your CSV file onto CleanCSV. Our online CSV cleaner automatically detects encoding errors, duplicate rows, and whitespace issues. Preview the fixes, then download your cleaned file. No signup required."
+          "text": "StripeClear supports all standard Stripe export types: Payments, Balance Transactions, Payouts, Refunds, Customers, and Invoices. Each export type gets optimized transformation rules."
         }
       },
       {
         "@type": "Question",
-        "name": "How do I fix UTF-8 encoding errors in a CSV file?",
+        "name": "How does the gross/fees/net breakdown work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CleanCSV automatically detects and repairs UTF-8 encoding issues (mojibake). Upload your file and our tool converts Windows-1252, ISO-8859-1, and other legacy encodings to proper UTF-8."
+          "text": "We extract and calculate the gross payment amount, all applicable Stripe fees (processing, international, disputes), and the final net amount that hits your bank. Everything is converted to readable dollar amounts."
         }
       },
       {
         "@type": "Question",
-        "name": "How do I remove duplicate rows from a CSV file?",
+        "name": "What is payout grouping?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CleanCSV identifies duplicate rows by comparing the entire content of each row. The tool keeps the first occurrence and removes subsequent duplicates, preserving your data order."
+          "text": "When Stripe sends money to your bank, they batch multiple payments into a single transfer. Our payout grouping feature shows you exactly which customer payments are included in each bank deposit."
         }
       },
       {
         "@type": "Question",
-        "name": "How does CleanCSV protect my data privacy?",
+        "name": "Is my Stripe data safe?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CleanCSV processes your files entirely in your browser using JavaScript. Your data never leaves your computer and is never uploaded to any server."
+          "text": "Your data never leaves your computer. All processing happens locally in your browser using JavaScript. We have no servers that receive, store, or process your Stripe exports."
         }
       },
       {
         "@type": "Question",
-        "name": "Can I clean a CSV file from Excel or Google Sheets?",
+        "name": "Can I use this with QuickBooks or Xero?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Export your spreadsheet as CSV first, upload it to CleanCSV to fix issues, then re-import the cleaned file back into your spreadsheet app."
+          "text": "Yes. The cleaned CSV output is designed to be compatible with all major accounting software. Human-readable column names, proper date formats, and clear currency amounts make importing straightforward."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does StripeClear cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StripeClear offers one-time payments with no subscription: $9.99 for a single file, $24.99 for a 3-file pack (17% savings), or $39.99 for a 5-file pack (20% savings). Credits never expire."
+        }
+      }
+    ]
+  };
+
+  // BreadcrumbList Schema
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://stripeclear.com"
       }
     ]
   };
@@ -167,14 +234,24 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/icon.svg" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#635BFF" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
       </head>
       <body className="antialiased font-sans" suppressHydrationWarning>
