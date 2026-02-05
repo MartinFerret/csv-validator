@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main rounded square -->
+  <rect x="42" y="42" width="428" height="428" rx="96" fill="url(#iconGrad)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.3">
+    <line x1="192" y1="128" x2="192" y2="384" stroke="white" stroke-width="12"/>
+    <line x1="320" y1="128" x2="320" y2="384" stroke="white" stroke-width="12"/>
+    <line x1="128" y1="213" x2="384" y2="213" stroke="white" stroke-width="12"/>
+    <line x1="128" y1="299" x2="384" y2="299" stroke="white" stroke-width="12"/>
+  </g>
+
+  <!-- Sparkle -->
+  <circle cx="363" cy="149" r="24" fill="white" opacity="0.9"/>
+  <line x1="363" y1="100" x2="363" y2="117" stroke="white" stroke-width="12" stroke-linecap="round"/>
+  <line x1="363" y1="181" x2="363" y2="198" stroke="white" stroke-width="12" stroke-linecap="round"/>
+  <line x1="314" y1="149" x2="331" y2="149" stroke="white" stroke-width="12" stroke-linecap="round"/>
+  <line x1="395" y1="149" x2="412" y2="149" stroke="white" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Checkmark -->
+  <path d="M171 267L224 320L341 203" stroke="white" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

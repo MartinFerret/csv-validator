@@ -1,0 +1,95 @@
+Name;Email;Company;Country;Signup Date
+Müller;hans.mueller@example.com;TechCorp GmbH;Germany;2024-01-15
+José García;jose.garcia@test.es;Innovación S.L.;Spain;2024-01-16
+François Dupont;francois@entreprise.fr;Solutions Françaises;France;15/01/2024
+María López;maria.lopez@correo.mx;Desarrollo MX;Mexico;2024-01-18
+João Silva;joao.silva@empresa.br;Tech Brasil;Brazil;2024-01-19
+André Côté;andre.cote@quebec.ca;Innovations Québec;Canada;20-01-2024
+Müller;hans.mueller@example.com;TechCorp GmbH;Germany;2024-01-15
+Björn Svensson;bjorn@foretag.se;Svenska Tech;Sweden;2024-01-22
+Søren Nielsen;soren@virksomhed.dk;Dansk IT;Denmark;2024-01-23
+Øystein Berg;oystein@bedrift.no;Norsk Data;Norway;2024-01-24
+  Pierre Martin;pierre@societe.fr;Martin & Fils;France;2024-01-25
+Elena Rossi ;elena.rossi@azienda.it;Tech Italia;Italy;2024-01-26
+Paweł Kowalski;pawel@firma.pl;Polski Software;Poland;27/01/2024
+Lukáš Novák;lukas@spolecnost.cz;Czech Solutions;Czechia;2024-01-28
+Jürgen Schmidt;jurgen@unternehmen.de;Schmidt AG;Germany;2024-01-29
+Zoë Williams;zoe.williams@company.uk;British Tech;UK;2024-01-30
+Naïve Löwe;naive@example.de;Löwe GmbH;Germany;2024-01-31
+Café Owner;cafe@business.fr;Le Café Parisien;France;2024-02-01
+José García;jose.garcia@test.es;Innovación S.L.;Spain;2024-01-16
+Renée Dubois;renee@entreprise.fr;Dubois SARL;France;2024-02-03
+Hélène Blanc;helene@societe.fr;Blanc Industries;France;04/02/2024
+Ñoño Pérez;nono@empresa.es;Pérez Hermanos;Spain;2024-02-05
+Çağlar Yılmaz;caglar@sirket.tr;Türk Tech;Turkey;2024-02-06
+Ēriks Bērziņš;eriks@uznemums.lv;Latvijas IT;Latvia;2024-02-07
+Štefan Horváth;stefan@spolocnost.sk;Slovak Solutions;Slovakia;08-02-2024
+Žiga Novak;ziga@podjetje.si;Slovenska Tech;Slovenia;2024-02-09
+Đorđe Petrović;djordje@preduzece.rs;Srpski Software;Serbia;2024-02-10
+Włodzimierz Kamiński;wlodzimierz@firma.pl;Kaminski Tech;Poland;2024-02-11
+Þór Sigurðsson;thor@fyrirtaeki.is;Icelandic Data;Iceland;2024-02-12
+Ægir Jónsson;aegir@company.is;Nordic Solutions;Iceland;2024-02-13
+Müller;hans.mueller@example.com;TechCorp GmbH;Germany;2024-01-15
+  Sarah Johnson  ;sarah@company.com;Johnson LLC;USA;2024-02-15
+Michael Brown;michael.brown@tech.com;BrownTech Inc;USA;16/02/2024
+Emily Davis;emily@startup.io;Davis Ventures;USA;2024-02-17
+David Wilson;david.wilson@corp.com;Wilson Group;USA;2024-02-18
+Emma Taylor;emma@enterprise.co;Taylor Systems;UK;2024-02-19
+James Anderson;james@business.au;Anderson Pty;Australia;20-02-2024
+Olivia Thomas;olivia@tech.nz;Thomas Tech;New Zealand;2024-02-21
+William Jackson;william@company.ca;Jackson Inc;Canada;2024-02-22
+Sophia White;sophia.white@firm.us;White Consulting;USA;2024-02-23
+Alexander Harris;alex@solutions.eu;Harris Solutions;Ireland;24/02/2024
+Isabella Martin;isabella@corp.mx;Martin Group;Mexico;2024-02-25
+Benjamin Thompson;ben@tech.sg;Thompson Asia;Singapore;2024-02-26
+Mia Garcia;mia.garcia@empresa.ar;Garcia SA;Argentina;2024-02-27
+Lucas Rodriguez;lucas@compania.cl;Rodriguez Ltda;Chile;28-02-2024
+Amelia Martinez;amelia@negocio.co;Martinez SAS;Colombia;2024-02-29
+Henry Lee;henry.lee@company.hk;Lee Holdings;Hong Kong;2024-03-01
+Charlotte Kim;charlotte@tech.kr;Kim Technologies;South Korea;2024-03-02
+Daniel Park;daniel.park@corp.jp;Park Japan KK;Japan;03/03/2024
+Ava Chen;ava.chen@company.tw;Chen Enterprise;Taiwan;2024-03-04
+Matthew Wang;matthew@tech.cn;Wang Tech;China;2024-03-05
+Harper Liu;harper.liu@firm.sg;Liu Consulting;Singapore;2024-03-06
+Sebastian Nguyen;sebastian@business.vn;Nguyen Corp;Vietnam;07-03-2024
+Evelyn Tanaka;evelyn@kaisha.jp;Tanaka Inc;Japan;2024-03-08
+Jack Yamamoto;jack.yamamoto@corp.jp;Yamamoto Group;Japan;2024-03-09
+Aria Patel;aria.patel@company.in;Patel Industries;India;2024-03-10
+  Owen Kumar  ;owen@tech.in;Kumar Solutions;India;11/03/2024
+Scarlett Sharma;scarlett@startup.in;Sharma Ventures;India;2024-03-12
+Leo Gupta;leo.gupta@firm.in;Gupta Consulting;India;2024-03-13
+Chloe Singh;chloe@enterprise.in;Singh Systems;India;2024-03-14
+Mason Reddy;mason.reddy@corp.in;Reddy Group;India;15-03-2024
+Lily Rao;lily.rao@company.in;Rao Technologies;India;2024-03-16
+Ethan Menon;ethan@tech.in;Menon Tech;India;2024-03-17
+Zoey Nair;zoey.nair@business.in;Nair Associates;India;2024-03-18
+Aiden Iyer;aiden@solutions.in;Iyer Solutions;India;19/03/2024
+Layla Krishnan;layla@startup.in;Krishnan Labs;India;2024-03-20
+Lucas Sundaram;lucas.sundaram@firm.in;Sundaram Corp;India;2024-03-21
+Grace Venkat;grace@enterprise.in;Venkat Industries;India;2024-03-22
+Elijah Raman;elijah.raman@corp.in;Raman Group;India;23-03-2024
+Riley Suresh;riley@company.in;Suresh Holdings;India;2024-03-24
+Jackson Anand;jackson.anand@tech.in;Anand Tech;India;2024-03-25
+Penelope Vivek;penelope@business.in;Vivek Consulting;India;2024-03-26
+Gabriel Arjun;gabriel.arjun@firm.in;Arjun Associates;India;27/03/2024
+Nora Vikram;nora@solutions.in;Vikram Solutions;India;2024-03-28
+Carter Arun;carter.arun@startup.in;Arun Ventures;India;2024-03-29
+Hannah Karthik;hannah@enterprise.in;Karthik Systems;India;2024-03-30
+Wyatt Varun;wyatt.varun@corp.in;Varun Group;India;31-03-2024
+Addison Prasad;addison@company.in;Prasad Industries;India;2024-04-01
+Luke Ganesh;luke.ganesh@tech.in;Ganesh Tech;India;2024-04-02
+Eleanor Mohan;eleanor@business.in;Mohan Corp;India;2024-04-03
+Owen Srinivas;owen.srinivas@firm.in;Srinivas Consulting;India;04/04/2024
+Stella Ramesh;stella@solutions.in;Ramesh Solutions;India;2024-04-05
+Levi Sunil;levi.sunil@startup.in;Sunil Labs;India;2024-04-06
+Hazel Ashok;hazel@enterprise.in;Ashok Industries;India;2024-04-07
+Isaac Rajesh;isaac.rajesh@corp.in;Rajesh Group;India;08-04-2024
+Violet Manoj;violet@company.in;Manoj Holdings;India;2024-04-08
+Asher Sanjay;asher.sanjay@tech.in;Sanjay Tech;India;2024-04-09
+Aurora Deepak;aurora@business.in;Deepak Associates;India;2024-04-10
+Ezra Praveen;ezra.praveen@firm.in;Praveen Corp;India;11/04/2024
+Savannah Naveen;savannah@solutions.in;Naveen Solutions;India;2024-04-12
+Lincoln Harish;lincoln.harish@startup.in;Harish Ventures;India;2024-04-13
+Audrey Girish;audrey@enterprise.in;Girish Systems;India;2024-04-14
+Hudson Satish;hudson.satish@corp.in;Satish Group;India;15-04-2024
+Bella Dinesh;bella@company.in;Dinesh Industries;India;2024-04-15
