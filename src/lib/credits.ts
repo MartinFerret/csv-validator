@@ -5,8 +5,8 @@
  * Credits are granted after successful Stripe payment and verified via session ID.
  */
 
-const CREDITS_KEY = 'stripeclear_credits';
-const USED_SESSIONS_KEY = 'stripeclear_used_sessions';
+const CREDITS_KEY = 'cleancsv_credits';
+const USED_SESSIONS_KEY = 'cleancsv_used_sessions';
 
 interface CreditsData {
   credits: number;

@@ -15,10 +15,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://stripeclear.com'),
+  metadataBase: new URL('https://clean-csv.com'),
   title: {
-    default: "StripeClear - Transform Stripe CSV Exports into Accountant-Ready Files",
-    template: "%s | StripeClear",
+    default: "CleanCSV - Transform Stripe CSV Exports into Accountant-Ready Files",
+    template: "%s | CleanCSV",
   },
   description: "Transform confusing Stripe CSV exports into clean, accountant-ready files. Clear gross/fees/net breakdown, payout grouping, timezone conversion. 100% private - your data never leaves your browser.",
   keywords: [
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     "Stripe gross net fees",
     "accountant Stripe export",
   ],
-  authors: [{ name: "StripeClear" }],
-  creator: "StripeClear",
-  publisher: "StripeClear",
+  authors: [{ name: "CleanCSV" }],
+  creator: "CleanCSV",
+  publisher: "CleanCSV",
   robots: {
     index: true,
     follow: true,
@@ -63,29 +63,29 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://stripeclear.com",
-    siteName: "StripeClear",
-    title: "StripeClear - Stripe Exports Made Accountant-Ready",
+    url: "https://clean-csv.com",
+    siteName: "CleanCSV",
+    title: "CleanCSV - Stripe Exports Made Accountant-Ready",
     description: "Transform messy Stripe CSV exports into clean files with clear gross/fees/net breakdown. 100% private browser processing.",
     images: [
       {
-        url: "https://stripeclear.com/og-image.png",
+        url: "https://clean-csv.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "StripeClear - Transform Stripe Exports into Accountant-Ready Files",
+        alt: "CleanCSV - Transform Stripe Exports into Accountant-Ready Files",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "StripeClear - Stripe Exports Made Accountant-Ready",
+    title: "CleanCSV - Stripe Exports Made Accountant-Ready",
     description: "Transform messy Stripe CSV exports into clean files with clear gross/fees/net breakdown. 100% private browser processing.",
-    images: ["https://stripeclear.com/og-image.png"],
-    creator: "@stripeclear",
+    images: ["https://clean-csv.com/og-image.png"],
+    creator: "@cleancsv",
   },
   alternates: {
-    canonical: "https://stripeclear.com",
+    canonical: "https://clean-csv.com",
   },
   icons: {
     icon: [
@@ -109,9 +109,9 @@ export default function RootLayout({
   const webAppJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "@id": "https://stripeclear.com/#webapp",
-    "name": "StripeClear",
-    "url": "https://stripeclear.com",
+    "@id": "https://clean-csv.com/#webapp",
+    "name": "CleanCSV",
+    "url": "https://clean-csv.com",
     "description": "Transform confusing Stripe CSV exports into accountant-ready files. Clear gross/fees/net breakdown, payout grouping, timezone conversion.",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Any",
@@ -132,7 +132,7 @@ export default function RootLayout({
       "100% browser-based processing",
       "No data upload to servers"
     ],
-    "screenshot": "https://stripeclear.com/og-image.png",
+    "screenshot": "https://clean-csv.com/og-image.png",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
@@ -146,10 +146,10 @@ export default function RootLayout({
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://stripeclear.com/#organization",
-    "name": "StripeClear",
-    "url": "https://stripeclear.com",
-    "logo": "https://stripeclear.com/logo.png",
+    "@id": "https://clean-csv.com/#organization",
+    "name": "CleanCSV",
+    "url": "https://clean-csv.com",
+    "logo": "https://clean-csv.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "mferret.pro@gmail.com",
@@ -162,14 +162,14 @@ export default function RootLayout({
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://stripeclear.com/#faq",
+    "@id": "https://clean-csv.com/#faq",
     "mainEntity": [
       {
         "@type": "Question",
         "name": "Which Stripe export types are supported?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "StripeClear supports all standard Stripe export types: Payments, Balance Transactions, Payouts, Refunds, Customers, and Invoices. Each export type gets optimized transformation rules."
+          "text": "CleanCSV supports all standard Stripe export types: Payments, Balance Transactions, Payouts, Refunds, Customers, and Invoices. Each export type gets optimized transformation rules."
         }
       },
       {
@@ -206,10 +206,10 @@ export default function RootLayout({
       },
       {
         "@type": "Question",
-        "name": "How much does StripeClear cost?",
+        "name": "How much does CleanCSV cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "StripeClear offers one-time payments with no subscription: $9.99 for a single file, $24.99 for a 3-file pack (17% savings), or $39.99 for a 5-file pack (20% savings). Credits never expire."
+          "text": "CleanCSV offers one-time payments with no subscription: $9.99 for a single file, $24.99 for a 3-file pack (17% savings), or $39.99 for a 5-file pack (20% savings). Credits never expire."
         }
       }
     ]
@@ -224,7 +224,7 @@ export default function RootLayout({
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://stripeclear.com"
+        "item": "https://clean-csv.com"
       }
     ]
   };

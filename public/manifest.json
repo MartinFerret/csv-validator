@@ -1,6 +1,6 @@
 {
-  "name": "StripeClear",
-  "short_name": "StripeClear",
+  "name": "CleanCSV",
+  "short_name": "CleanCSV",
   "description": "Transform Stripe CSV exports into accountant-ready files",
   "start_url": "/",
   "display": "standalone",

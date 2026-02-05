@@ -1,11 +1,11 @@
-# robots.txt for StripeClear
-# https://stripeclear.com
+# robots.txt for CleanCSV
+# https://clean-csv.com
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://stripeclear.com/sitemap.xml
+Sitemap: https://clean-csv.com/sitemap.xml
 
 # Disallow API routes
 Disallow: /api/

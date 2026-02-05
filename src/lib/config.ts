@@ -48,7 +48,7 @@ export const PACK_3_PRICE = PRICING.pack3.price;
 export const PACK_5_PRICE = PRICING.pack5.price;
 
 // Product info
-export const PRODUCT_NAME = 'StripeClear';
+export const PRODUCT_NAME = 'CleanCSV';
 export const PRODUCT_TAGLINE = 'Transform messy Stripe exports into accountant-ready CSVs';
 
 // Test mode - disabled (real Stripe payments)

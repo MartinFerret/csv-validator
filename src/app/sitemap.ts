@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://stripeclear.com';
+  const baseUrl = 'https://clean-csv.com';
   const lastModified = new Date();
 
   return [

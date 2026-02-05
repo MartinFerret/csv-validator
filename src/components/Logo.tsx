@@ -85,7 +85,7 @@ export default function Logo({ size = 'md', showText = true, variant = 'default'
       {/* Text */}
       {showText && (
         <span className={`${text} font-bold ${textColor} tracking-tight`}>
-          Stripe<span className="text-gradient">Clear</span>
+          Clean<span className="text-gradient">CSV</span>
         </span>
       )}
     </div>
